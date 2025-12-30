@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-dark-900 text-gray-100;
+  font-family: 'Inter', sans-serif;
+}
+
+.card {
+  @apply bg-dark-800 border border-dark-700 rounded-lg p-6 shadow-xl;
+}
