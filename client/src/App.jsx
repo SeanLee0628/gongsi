@@ -151,6 +151,18 @@ function App() {
           </div>
         )}
 
+        {/* 🚀 Animated Loading Bar */}
+        {loading && (
+          <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-800 overflow-hidden rounded-b-2xl">
+            <motion.div
+              initial={{ x: '-100%' }}
+              animate={{ x: '100%' }}
+              transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
+              className="w-1/2 h-full bg-gradient-to-r from-transparent via-purple-500 to-transparent"
+            />
+          </div>
+        )}
+
         {error && (
           <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} className="mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-xl flex items-center text-red-400">
             <AlertCircle className="w-5 h-5 mr-3 flex-shrink-0" />
